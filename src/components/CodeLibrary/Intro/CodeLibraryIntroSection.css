@@ -1,0 +1,13 @@
+.code-library-intro {
+  padding: 20px 22px;
+}
+
+.code-library-intro-text {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--color-text-muted);
+  max-width: 52rem;
+}
+
+
+

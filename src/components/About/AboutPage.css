@@ -1,0 +1,20 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .about-page-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+

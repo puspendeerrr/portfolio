@@ -1,0 +1,27 @@
+.contact-form {
+  padding: 18px 20px 20px;
+}
+
+.google-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.google-form-container iframe {
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .google-form-container iframe {
+    height: 800px;
+  }
+}
+
+
+

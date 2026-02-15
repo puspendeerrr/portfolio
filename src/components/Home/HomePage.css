@@ -1,0 +1,14 @@
+.home-page-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .home-page-grid {
+    gap: 32px;
+  }
+}
+
+
+

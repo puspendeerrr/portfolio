@@ -1,0 +1,139 @@
+/**
+ * Breadcrumb Navigation Component Styles
+ */
+
+.breadcrumb-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+  border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-path {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.breadcrumb-segment {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.breadcrumb-separator {
+  color: #666;
+  padding: 0 6px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.breadcrumb-folder,
+.breadcrumb-file {
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+.breadcrumb-folder {
+  color: #b0b0b0;
+}
+
+.breadcrumb-folder:hover {
+  color: #e0e0e0;
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.breadcrumb-file {
+  color: #c5e1a5;
+  background: rgba(102, 126, 234, 0.15);
+  font-weight: 600;
+}
+
+/* Meta Information */
+.breadcrumb-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.language-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.file-size {
+  font-size: 11px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 6px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 3px;
+}
+
+/* Scrollbar for breadcrumb path */
+.breadcrumb-path::-webkit-scrollbar {
+  height: 4px;
+}
+
+.breadcrumb-path::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.breadcrumb-path::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.3);
+  border-radius: 2px;
+}
+
+.breadcrumb-path::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .breadcrumb-path {
+    width: 100%;
+  }
+
+  .breadcrumb-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .breadcrumb-folder,
+  .breadcrumb-file {
+    font-size: 11px;
+  }
+
+  .language-badge {
+    padding: 2px 8px;
+    font-size: 9px;
+  }
+}

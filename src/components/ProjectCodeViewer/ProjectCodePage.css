@@ -1,0 +1,12 @@
+.project-code-page {
+  padding: 20px 20px 18px;
+}
+
+.project-code-page-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+

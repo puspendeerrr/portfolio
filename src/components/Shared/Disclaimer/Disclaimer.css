@@ -1,0 +1,38 @@
+.disclaimer {
+  padding: 18px 20px;
+}
+
+.disclaimer-title {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color:var(--color-text-secondary, rgba(255, 0, 0, 0.8));
+}
+
+.disclaimer-body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary, rgba(255, 0, 0, 0.8));
+}  
+
+.disclaimer-body p {
+  margin: 0 0 12px 0;
+}
+
+.disclaimer-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .disclaimer {
+    padding: 16px 18px;
+  }
+
+  .disclaimer-title {
+    font-size: 1rem;
+  }
+
+  .disclaimer-body {
+    font-size: 0.85rem;
+  }
+}

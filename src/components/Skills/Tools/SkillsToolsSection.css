@@ -1,0 +1,12 @@
+.skills-tools {
+  padding: 18px 20px;
+}
+
+.skills-tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+

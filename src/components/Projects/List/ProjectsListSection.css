@@ -1,0 +1,88 @@
+.projects-list {
+  padding: 18px 20px 20px;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.project-card {
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 14px 16px 12px;
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(226, 232, 240, 0.96);
+}
+
+.project-card-summary {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.project-card-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  font-size: 0.86rem;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.project-card-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: rgba(226, 232, 240, 0.7);
+  margin-bottom: 4px;
+}
+
+.project-card-features {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.project-card-features li {
+  margin-bottom: 2px;
+}
+
+.project-card-learnings {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-card-btn {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .project-card-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
