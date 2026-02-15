@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CodeLibraryIntroSection } from "./Intro/CodeLibraryIntroSection";
 import { CodeLibraryEntriesSection } from "./Entries/CodeLibraryEntriesSection";
 import { Disclaimer } from "../Shared/Disclaimer/Disclaimer";
+import BASE_URL from "../../api/config";
 import "./CodeLibraryPage.css";
 
 interface CodeFile {
@@ -28,7 +29,7 @@ export const CodeLibraryPage: React.FC = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/files');
+      const response = await fetch(`${BASE_URL}/files`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch files');

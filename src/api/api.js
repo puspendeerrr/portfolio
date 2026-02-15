@@ -1,10 +1,9 @@
 /**
  * API Utility
  * Handles all backend API calls for authentication and file management
- * Base URL: http://localhost:5000/api
  */
 
-const BASE_URL = 'http://localhost:5000/api';
+import BASE_URL from './config';
 
 /**
  * Login - POST /api/auth/login

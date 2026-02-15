@@ -1,3 +1,5 @@
+import BASE_URL from '../../../api/config';
+
 export interface ProjectCodeFile {
   path: string;
   language: "typescript" | "tsx" | "javascript" | "text";
@@ -176,9 +178,9 @@ export const loadProjectsFromApi = async (): Promise<ProjectCodeDefinition[]> =>
   }
 
   try {
-    console.log('[ProjectCodeData] Fetching projects from /api/projects');
+    console.log('[ProjectCodeData] Fetching projects from', `${BASE_URL}/projects`);
     
-    const response = await fetch('/api/projects');
+    const response = await fetch(`${BASE_URL}/projects`);
     
     if (!response.ok) {
       console.error('[ProjectCodeData] API returned status:', response.status, response.statusText);
