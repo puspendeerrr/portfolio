@@ -7,6 +7,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 import authRoutes from './routes/authRoutes.js';
 import filesRoutes from './routes/filesRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
+import heroSlidesRoutes from './routes/heroSlidesRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -99,6 +100,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/files', filesRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/hero-slides', heroSlidesRoutes);
 
 /**
  * 404 Handler

@@ -6,6 +6,7 @@ import UploadFolderButton from './UploadFolderButton';
 import CreateProjectForm from './CreateProjectForm';
 import UploadProjectFolder from './UploadProjectFolder';
 import ProjectList from './ProjectList';
+import HeroSlidesManager from './HeroSlidesManager';
 import './DashboardPage.css';
 import './ProjectsManagement.css';
 
@@ -376,6 +377,11 @@ const DashboardPage = () => {
             </div>
           )}
         </>
+      )}
+
+      {/* Hero Slides Manager */}
+      {token && (
+        <HeroSlidesManager token={token} />
       )}
 
       {/* Projects Management Section */}

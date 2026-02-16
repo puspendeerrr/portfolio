@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HeroSlideshow } from "./HeroSlideshow";
 import "./HomeHeroSection.css";
 
 export const HomeHeroSection: React.FC = () => {
@@ -44,30 +45,7 @@ export const HomeHeroSection: React.FC = () => {
         </div>
       </div>
       <div className="home-hero-right">
-        <div className="home-hero-orbit">
-          <div className="home-hero-orbit-core">
-            <img
-              src="/profile.jpg"
-              alt="Puspender Kumar — Software Engineer"
-              className="home-profile-image"
-              loading="lazy"
-            />
-            <span className="home-hero-orbit-label">Current stack</span>
-          </div>
-          <div className="home-hero-orbit-ring home-hero-orbit-ring--primary" />
-          <div className="home-hero-orbit-ring home-hero-orbit-ring--secondary" />
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--typescript">TypeScript</div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--react">React</div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--node">Node</div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--systems">Systems</div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--runtime">Runtime &amp; IO</div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--frontend">
-            Interfaces &amp; UX
-          </div>
-          <div className="home-hero-orbit-chip home-hero-orbit-chip--cs">
-            Core CS &amp; algorithms
-          </div>
-        </div>
+        <HeroSlideshow />
       </div>
     </section>
   );
