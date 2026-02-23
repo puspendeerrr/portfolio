@@ -1,34 +1,22 @@
 {
-  "name": "personal-digital-platform",
+  "name": "portfolio",
   "version": "1.0.0",
+  "description": "Personal portfolio with full-stack application",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd backend && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd backend && npm run build",
+    "preview": "cd client && npm run preview",
+    "lint": "cd client && npm run lint"
   },
-  "dependencies": {
-    "@studio-freight/lenis": "^1.0.42",
-    "axios": "^1.13.5",
-    "framer-motion": "^12.34.0",
-    "lenis": "^1.3.17",
-    "prismjs": "^1.29.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
-    "react-syntax-highlighter": "^15.6.6"
-  },
+  "keywords": ["portfolio", "full-stack"],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.1",
-    "@typescript-eslint/parser": "^8.0.1",
-    "@vitejs/plugin-react-swc": "^3.7.1",
-    "eslint": "^9.11.1",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.11",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.8"
+    "concurrently": "^8.2.2"
   }
 }

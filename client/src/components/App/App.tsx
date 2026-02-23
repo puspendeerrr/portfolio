@@ -14,6 +14,7 @@ import { ContactPage } from "../Contact/ContactPage";
 import LoginPage from "../Auth/LoginPage";
 import ProtectedRoute from "../Auth/ProtectedRoute";
 import DashboardPage from "../Dashboard/DashboardPage";
+// import CompilerPage from "../Compiler/CompilerPage";
 import "./App.css";
 
 export const App: React.FC = () => {
