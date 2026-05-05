@@ -1,0 +1,139 @@
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* Hero */
+.exp-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.exp-pill {
+  background: rgba(124, 58, 237, 0.12);
+  color: #a78bfa;
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+.exp-pill .pill-dot {
+  background: #a78bfa;
+  box-shadow: 0 0 8px #7c3aed;
+}
+
+.exp-hero-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.exp-hero-desc {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Grid */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.exp-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 60px var(--card-glow, rgba(124,58,237,0.15));
+}
+
+.exp-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.exp-card-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  width: fit-content;
+}
+
+.exp-card-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.exp-card-period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.exp-card-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.exp-card-glow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.25;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.exp-card:hover .exp-card-glow {
+  opacity: 0.45;
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-card { padding: 24px; }
+}

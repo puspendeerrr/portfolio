@@ -1,0 +1,39 @@
+.project-code-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-code-title {
+  margin: 8px 0 4px;
+  font-size: 1.3rem;
+}
+
+.project-code-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  max-width: 40rem;
+}
+
+.project-code-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .project-code-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-code-header-meta {
+    align-items: flex-start;
+  }
+}
+
+
+

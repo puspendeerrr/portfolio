@@ -1,0 +1,15 @@
+# Netlify configuration for React SPA
+# This tells Netlify:
+#  1. How to build the frontend
+#  2. That ALL routes should serve index.html (client-side routing)
+
+[build]
+  base    = "client"
+  command = "npm run build"
+  publish = "client/dist"
+
+# Redirect all routes to index.html for React Router to handle
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

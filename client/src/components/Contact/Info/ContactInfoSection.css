@@ -1,0 +1,17 @@
+.contact-info {
+  padding: 20px 22px;
+}
+
+.contact-info-text {
+  margin: 0 0 6px;
+  font-size: 0.96rem;
+  color: var(--color-text-muted);
+}
+
+.contact-info-email {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+

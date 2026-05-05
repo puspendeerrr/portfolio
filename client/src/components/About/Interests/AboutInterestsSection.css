@@ -1,0 +1,16 @@
+.about-interests {
+  padding: 18px 20px;
+}
+
+.about-interests-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+

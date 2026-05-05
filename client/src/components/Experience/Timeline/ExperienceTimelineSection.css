@@ -1,0 +1,47 @@
+.experience-timeline {
+  padding: 18px 20px 20px;
+}
+
+.experience-timeline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.experience-timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+  margin-top: 4px;
+}
+
+.experience-timeline-title {
+  font-weight: 600;
+}
+
+.experience-timeline-type {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text);
+}
+
+.experience-timeline-description {
+  margin: 2px 0 0;
+  color: var(--color-text);
+}
+
+
+

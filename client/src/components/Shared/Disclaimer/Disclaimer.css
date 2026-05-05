@@ -1,0 +1,37 @@
+.disclaimer {
+  padding: 32px 40px;
+  background: var(--color-bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-subtle);
+  margin-top: 40px;
+}
+
+.disclaimer-title {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.disclaimer-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}  
+
+.disclaimer-body p {
+  margin: 0 0 12px 0;
+}
+
+.disclaimer-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .disclaimer {
+    padding: 24px;
+  }
+}

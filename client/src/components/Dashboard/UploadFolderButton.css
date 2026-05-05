@@ -1,0 +1,110 @@
+/* Upload Folder Button Styles */
+.upload-folder-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.upload-folder-btn {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.upload-folder-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.upload-folder-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-progress-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #667eea;
+}
+
+.progress-text {
+  min-width: 30px;
+  font-weight: 500;
+}
+
+.progress-bar-small {
+  width: 100px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill-small {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.upload-status-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  animation: slideUp 0.3s ease;
+  z-index: 10;
+}
+
+.upload-status-message.success {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #16a34a;
+}
+
+.upload-status-message.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .upload-folder-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .upload-progress-inline {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .progress-bar-small {
+    width: 80px;
+  }
+}

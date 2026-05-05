@@ -1,0 +1,13 @@
+.projects-intro {
+  padding: 20px 22px;
+}
+
+.projects-intro-text {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--color-text);
+  max-width: 52rem;
+}
+
+
+

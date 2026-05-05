@@ -1,0 +1,291 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* Hero */
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-pill {
+  background: rgba(236, 72, 153, 0.12);
+  color: #f472b6;
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+.about-pill .pill-dot {
+  background: #f472b6;
+  box-shadow: 0 0 8px #ec4899;
+}
+
+.about-hero-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.about-hero-desc {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-highlight {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Bento Grid */
+.about-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Base card */
+.about-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Span types */
+.about-card--edu     { grid-column: span 2; }
+.about-card--skills  { grid-column: span 1; grid-row: span 2; }
+.about-card--interests { grid-column: span 2; }
+.about-card--facts   { grid-column: span 1; }
+
+/* Icon */
+.about-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Tag */
+.about-card-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  width: fit-content;
+}
+
+/* Title */
+.about-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+/* Glow blob */
+.about-card-glow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.about-card:hover .about-card-glow { opacity: 0.4; }
+
+/* Education */
+.about-edu-school {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: -8px;
+}
+
+.about-edu-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.about-edu-badge {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.25);
+  color: #c4b5fd;
+}
+
+.about-edu-badge--score {
+  background: rgba(250,204,21,0.1);
+  border-color: rgba(250,204,21,0.2);
+  color: #fcd34d;
+}
+
+.about-edu-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.about-skill-chip {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6);
+}
+
+/* Skills */
+.about-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.about-skill-row { display: flex; flex-direction: column; gap: 6px; }
+
+.about-skill-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-skill-name {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+.about-skill-pct {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.about-skill-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.about-skill-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* Interests */
+.about-interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.about-interest-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.2s;
+}
+
+.about-interest-chip:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.about-interest-icon { font-size: 1rem; }
+
+/* Facts */
+.about-facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.about-fact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.about-fact-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.about-fact-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+}
+
+.about-fact-value {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  word-break: break-all;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-bento {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-card--edu      { grid-column: span 2; }
+  .about-card--skills   { grid-column: span 1; grid-row: span 1; }
+  .about-card--interests { grid-column: span 2; }
+  .about-card--facts    { grid-column: span 1; }
+}
+
+@media (max-width: 600px) {
+  .about-bento { grid-template-columns: 1fr; }
+  .about-card--edu,
+  .about-card--skills,
+  .about-card--interests,
+  .about-card--facts { grid-column: span 1; grid-row: span 1; }
+  .about-card { padding: 24px; }
+  .about-interests-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,13 @@
+.learnings-intro {
+  padding: 20px 22px;
+}
+
+.learnings-intro-text {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--color-text-muted);
+  max-width: 52rem;
+}
+
+
+

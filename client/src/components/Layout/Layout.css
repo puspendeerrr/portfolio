@@ -1,0 +1,116 @@
+.layout-header {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 64px;
+  background: var(--color-bg-elevated);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  z-index: 50;
+  padding: 0 12px;
+  transition: all var(--transition-med);
+}
+
+.layout-header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  white-space: nowrap;
+  background: linear-gradient(135deg, #fff 40%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+  display: none; /* Hide subtitle in pill nav to save space */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--color-text);
+}
+
+.nav-link--active {
+  color: var(--color-bg);
+  background: var(--color-text);
+}
+
+.theme-toggle {
+  width: 48px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-card);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  color: var(--color-text-muted);
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-text);
+  transition: transform var(--transition-fast);
+}
+
+[data-theme="light"] .theme-toggle-thumb {
+  transform: translateX(20px);
+}
+
+.theme-toggle-icon {
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .layout-header {
+    width: calc(100% - 32px);
+    border-radius: var(--radius-lg);
+  }
+  .nav {
+    display: none; /* In a real app we'd add a hamburger menu here */
+  }
+}

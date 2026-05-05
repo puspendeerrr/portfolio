@@ -1,0 +1,32 @@
+.skills-languages {
+  padding: 20px 22px;
+}
+
+.skills-languages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skills-languages-item {
+  font-size: 0.9rem;
+}
+
+.skills-languages-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.skills-languages-desc {
+  margin: 0;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .skills-languages-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+

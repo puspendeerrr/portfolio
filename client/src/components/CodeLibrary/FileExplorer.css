@@ -1,0 +1,264 @@
+/**
+ * File Explorer Component Styles
+ * VS Code-style file tree explorer with proper folder grouping
+ */
+
+.file-explorer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+/* ===== HEADER ===== */
+.explorer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+  border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.explorer-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.file-counter {
+  font-size: 11px;
+  color: #999;
+  background: rgba(102, 126, 234, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ===== CONTENT AREA ===== */
+.explorer-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.empty-state h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ===== FOLDERS LIST ===== */
+.folders-list {
+  user-select: none;
+}
+
+.folder-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+/* ===== FOLDER HEADER ===== */
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #b0b0b0;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Segoe UI', 'Fira Code', monospace;
+  user-select: none;
+}
+
+.folder-header:hover {
+  background: rgba(102, 126, 234, 0.15);
+  color: #e0e0e0;
+}
+
+.chevron {
+  display: inline-flex;
+  width: 14px;
+  justify-content: center;
+  font-size: 11px;
+  color: #667eea;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevron.expanded {
+  transform: rotate(90deg);
+}
+
+.folder-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.folder-label {
+  font-weight: 600;
+  text-transform: capitalize;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-count-badge {
+  font-size: 10px;
+  color: #666;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ===== FILES LIST ===== */
+.files-list {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.15);
+  border-left: 2px solid rgba(102, 126, 234, 0.15);
+  margin-left: 0;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #999;
+  font-size: 13px;
+  font-family: 'Segoe UI', 'Fira Code', monospace;
+  user-select: none;
+  position: relative;
+}
+
+.file-item:hover {
+  background: rgba(102, 126, 234, 0.2);
+  color: #e0e0e0;
+}
+
+.file-item.active {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.35), rgba(118, 75, 162, 0.2));
+  color: #fff;
+  border-left: 3px solid #f59e0b;
+  padding-left: 13px;
+}
+
+.file-item .icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  min-width: 14px;
+  text-align: center;
+}
+
+.file-item .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.file-item .language-badge {
+  font-size: 9px;
+  color: #666;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  display: none;
+}
+
+.file-item:hover .language-badge {
+  display: inline-block;
+}
+
+.file-item.active .language-badge {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+/* ===== SCROLLBAR ===== */
+.explorer-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.explorer-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.explorer-content::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.3);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.explorer-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .file-explorer {
+    max-height: 300px;
+    border-radius: 0;
+  }
+
+  .explorer-header h3 {
+    font-size: 12px;
+  }
+
+  .folder-header,
+  .file-item {
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+
+  .file-item .language-badge {
+    display: none !important;
+  }
+}
